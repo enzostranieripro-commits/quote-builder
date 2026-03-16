@@ -63,3 +63,14 @@ export const tplConfirmCommande = (p: { clientPrenom: string; entreprise: string
   subject: `Commande ${p.numero} confirmée — ${p.entreprise}`,
   body: `Bonjour ${p.clientPrenom},\n\nVotre commande ${p.numero} est bien enregistrée.\n\n${p.detail}\nMontant : ${p.montant}\n\nNous vous contacterons prochainement.\n📞 ${p.tel}\n\nMerci,\n${p.entreprise}`,
 });
+export const tplRappelReservation = (p: {
+  clientPrenom: string;
+  entreprise: string;
+  ref: string;
+  arrivee: string;
+  depart: string;
+  tel: string;
+}) => ({
+  subject: `Rappel — Votre réservation ${p.ref}`,
+  body: `Bonjour ${p.clientPrenom},\n\nNous vous rappelons votre réservation ${p.ref}.\n\n📅 Arrivée : ${p.arrivee}\n📅 Départ : ${p.depart}\n\nPour toute question : 📞 ${p.tel}\n\nÀ bientôt,\n${p.entreprise}`,
+});
