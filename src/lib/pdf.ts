@@ -1,7 +1,7 @@
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
-import type { Devis, Entreprise } from "@/types/devis";
-import { calculerTotalLigneHT, calculerTotauxDevis, formatMontant } from "@/types/devis";
+import type { Devis, Entreprise } from "@/types";
+import { calcHT as calculerTotalLigneHT, calcTotaux as calculerTotauxDevis, fmt as formatMontant } from "@/types";
 
 export function generateDevisPDF(devis: Devis, entreprise: Entreprise) {
   const doc = new jsPDF("p", "mm", "a4");
