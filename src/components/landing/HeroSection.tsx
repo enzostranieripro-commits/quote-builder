@@ -25,7 +25,7 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="xl">
+              <Button variant="hero" size="xl" onClick={() => navigate("/dashboard")}>
                 Créer mon premier devis
                 <ArrowRight className="w-5 h-5 ml-1" />
               </Button>
