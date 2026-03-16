@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import QuotePreview from "./QuotePreview";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <section className="pt-32 pb-20 px-8">
       <div className="max-w-[1200px] mx-auto">
